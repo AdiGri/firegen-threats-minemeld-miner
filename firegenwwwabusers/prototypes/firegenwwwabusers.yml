@@ -1,0 +1,27 @@
+description: >
+    Firegen Analytics WWW Abusers rulesets
+url: http://threats.firegenanalytics.com/
+
+prototypes:
+    compromisedIPs:
+        author: Adrian Grigorof (firegenanalytics.com)
+        development_status: STABLE
+        node_type: miner
+        indicator_types:
+            - IPv4
+        tags:
+            - ConfidenceMedium
+            - ShareLevelGreen
+            - OSINT
+        description: >
+            This ruleset is compiled from firewall logs collected by Firegen Analytics. Its content
+            are hosts that are confirmed to have malicious intent.
+        config:
+            source_name: FG.www_abusers
+            url: http://threats.firegenanalytics.com/abusers_www.csv
+            attributes:
+                type: IPv4
+                direction: inbound
+                share_level: green
+                confidence: 75
+        class: minemeld.ft.http.HttpFT

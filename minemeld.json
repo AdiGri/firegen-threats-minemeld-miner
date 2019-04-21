@@ -1,0 +1,16 @@
+{
+    "version": "0.1",
+    "name": "firegen-www-abusers-miner",
+    "author": "Adrian Grigorof",
+    "author_email": "adrian.grigorof@firegen.com",
+    "description": "Mines malicious IPs from http://threats.firegenanalytics.com/abusers_www.csv",
+    "entry_points": {
+        "minemeld_nodes": {
+            "firegenwwwabusers.Miner": "firegenwwwabusers.node:Miner"
+        },
+        "minemeld_prototypes": {
+            "firegenwwwabusers.prototypes": "firegenwwwabusers:prototypes"
+        }
+    },
+    "manifest_version": 0
+}
